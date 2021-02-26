@@ -1,0 +1,58 @@
+[
+    {
+        "name":"Bedfordshire clanger",
+        "description":"Suet crust dumpling with a savoury filling one end, sweet filling the other. The savoury filling is usually meat with diced potatoes and vegetables. The sweet filling can be jam, cooked apple or other fruit.",
+        "price":15000,
+        "UserId":null,
+        "VendorId":null
+    },
+    {
+        "name":"Bangers and mash",
+        "description":"Mashed potatoes and sausages, sometimes served with onion gravy or fried onions. Note that while sausages may date to the time given, potatoes are from the Americas and were not introduced to Europe until the 16th century.",
+        "price":10000,
+        "UserId":null,
+        "VendorId":null
+    },
+    {
+        "name":"Cobbler",
+        "description":"Fruit or savoury (e.g. beef) filling, covered with a scone mixture and baked",
+        "price":12500,
+        "UserId":null,
+        "VendorId":null
+    },
+    {
+        "name":"Rag pudding",
+        "description":"Minced meat with onions in a suet pastry, which is then boiled or steamed.",
+        "price":7500,
+        "UserId":null,
+        "VendorId":null
+    },
+    {
+        "name":"Stargazy pie",
+        "description":"Fish pie with sardines poking out of the piecrust, looking at the stars",
+        "price":9000,
+        "UserId":null,
+        "VendorId":null
+    },
+    {
+        "name":"Steak pie",
+        "description":"Beef and gravy in a pastry shell. Can also include ingredients such as ale, kidney, oysters, potato and root vegetables",
+        "price":8000,
+        "UserId":null,
+        "VendorId":null
+    },
+    {
+        "name":"Suet pudding",
+        "description":"Steamed pudding made with flour and suet, with meat or fruit mixed in",
+        "price":6000,
+        "UserId":null,
+        "VendorId":null
+    },
+    {
+        "name":"Welsh rarebit",
+        "description":"Melted cheese on toast",
+        "price":5000,
+        "UserId":null,
+        "VendorId":null
+    }
+]
