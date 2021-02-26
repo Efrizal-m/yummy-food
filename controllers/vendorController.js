@@ -48,7 +48,11 @@ class VendorController {
     static async getOne (req, res, next) {
         const id = +req.params.vendorId
         try {
-            const vendor = await Vendor.findByPk(id)
+            const vendor = await Vendor.findByPk(id, {
+                include : [{
+                    model: Dish
+                }]    
+            })
             res.status(200).json({vendor})
         } catch (error) {
             next(error)
