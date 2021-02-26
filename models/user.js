@@ -1,4 +1,5 @@
 'use strict';
+const hashingPassword = require('../helpers/password')
 const {
   Model
 } = require('sequelize');
@@ -16,9 +17,41 @@ module.exports = (sequelize, DataTypes) => {
   };
   User.init({
     name: DataTypes.STRING,
-    email: DataTypes.STRING,
-    password: DataTypes.STRING
+    email: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      unique: {
+        args: true,
+        msg: "email is already used"
+      },
+      validate: {
+        notEmpty : {
+          args: true,
+          msg: "email is required"
+        },
+        isEmail: {
+          args: true,
+          msg: "input must be a valid email address"
+        }
+      }
+    },
+    password: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      validate: {
+        notEmpty : {
+          args: true,
+          msg: "password is required"
+        }
+      }
+    }
   }, {
+    hooks: {
+      beforeCreate: (user,opt) => {
+        if (!user.name) { user.name = user.email.split('@')[0] }
+        user.password = hashingPassword(user.password)
+      }
+    },
     sequelize,
     modelName: 'User',
   });
