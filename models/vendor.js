@@ -19,8 +19,7 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.STRING,
       allowNull: false,
       validate: {
-        len: [1, 127],
-        msg: "Restaurant name should be less than 128 characters"
+        len: [1, 127]
       }
     },
     address: {
